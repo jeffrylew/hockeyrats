@@ -1,0 +1,22 @@
+{
+  "name": "hockeyrats",
+  "version": "1.0.0",
+  "description": "Content for hockeyrats.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrylew/hockeyrats.git"
+  },
+  "keywords": [
+    "hockey"
+  ],
+  "author": "Jeffry Lew",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/jeffrylew/hockeyrats/issues"
+  },
+  "homepage": "https://github.com/jeffrylew/hockeyrats#readme"
+}
