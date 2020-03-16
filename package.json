@@ -1,9 +1,22 @@
 {
   "name": "hockeyrats",
   "version": "0.0.0",
+  "description": "Content for hockeyrats.com",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrylew/hockeyrats.git"
+  },
+  "keywords": [
+    "hockey"
+  ],
+  "author": "Jeffry Lew",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/jeffrylew/hockeyrats/issues"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
