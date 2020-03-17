@@ -4,9 +4,18 @@ html {
   height: 100%;
 }
 
+#navbar-top {
+  /* Carnellian */
+  background-color: #b31b1b;
+}
+
+/* .navbar-brand {
+  text-transform: uppercase;
+} */
+
 .body-index {
   /* Seong flexing stick */
-  background-image: url('./../images/seong-stick-flex.jpg');
+  background-image: url("./../images/seong-stick-flex_medium.jpg");
 
   background-position: center;
   background-size: cover;
@@ -19,15 +28,6 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
-}
-
-/* .navbar-brand {
-  text-transform: uppercase;
-} */
-
-#index-top-navbar {
-  /* Carnellian */
-  background-color: #b31b1b;
 }
 
 .jumbotron {
@@ -45,4 +45,21 @@ html {
 .img-thumbnail {
   /* Limit height of profile picture on smaller screens */
   max-height: 17rem;
+}
+
+.body-about {
+  /* Full-body Profile */
+  background-image: url("./../images/joe-wagner-about_medium.jpg");
+
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Padding so fixed-top navbar doesn't cover content */
+  padding-top: 56px;
+
+  /* Padding so fixed-bottom navbar doesn't cover content */
+  padding-bottom: 56px;
+
+  font-family: 'Roboto Slab', sans-serif;
 }
