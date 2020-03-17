@@ -1,0 +1,60 @@
+<!-- Navbar at top of page: fixed-top to expand over content -->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark" id="index-top-navbar">
+  <!-- Container to center navbar contents -->
+  <div class="container">
+    <!-- Puck logo Joe -->
+    <a class="navbar-brand" href="/">
+      <img src="../../public/images/logo_navbar-240x40.png" class="img-fluid" alt="Hockeyrats navbar logo">
+    </a>
+
+    <!-- Navbar toggler/hamburger for smaller screens sizes -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item <%= typeof page !== 'undefined' && page === 'index' ? 'active' : '' %>">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/lessons">Lessons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Toggler/hamburger dropdown divider between left and right side links -->
+      <div class="dropdown-divider d-block d-md-none"></div>
+
+      <!-- Navbar right: External links (Facebook, Instagram, Twitter) -->
+      <!-- Text-only until md screen size then logo-only for larger screens -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/icelandskating/" target="_blank" rel="noreferrer noopener">
+            <p class="d-inline d-md-none">Facebook</p>
+            <i class="fab fa-facebook-square fa-lg d-none d-md-inline"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/icelandskatingcenter/" target="_blank" rel="noreferrer noopener">
+            <p class="d-inline d-md-none">Instagram</p>
+            <i class="fab fa-instagram-square fa-lg d-none d-md-inline"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/icelandhamilton"  target="_blank" rel="noreferrer noopener">
+            <p class="d-inline d-md-none">Twitter</p>
+            <i class="fab fa-twitter-square fa-lg d-none d-md-inline"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
