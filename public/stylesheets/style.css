@@ -63,3 +63,16 @@ html {
 
   font-family: 'Roboto Slab', sans-serif;
 }
+
+.body-lessons {
+  /* Light purple */
+  background-color: #c5baca;
+
+  /* Padding so fixed-top navbar doesn't cover content */
+  padding-top: 56px;
+
+  /* Padding so fixed-bottom navbar doesn't cover content */
+  padding-bottom: 56px;
+
+  font-family: 'Roboto Slab', sans-serif;
+}
