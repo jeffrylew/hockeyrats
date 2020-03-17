@@ -1,8 +1,48 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+html {
+  /* Background image will occupy 100% of window height */
+  height: 100%;
 }
 
-a {
-  color: #00B7FF;
+.body-index {
+  /* Seong flexing stick */
+  background-image: url('./../images/seong-stick-flex.jpg');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Padding so fixed-top navbar doesn't cover content */
+  padding-top: 56px;
+
+  /* Padding so fixed-bottom navbar doesn't cover content */
+  padding-bottom: 56px;
+
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+/* .navbar-brand {
+  text-transform: uppercase;
+} */
+
+#index-top-navbar {
+  /* Carnellian */
+  background-color: #b31b1b;
+}
+
+.jumbotron {
+  /* Tritanopia color palette */
+  background-color: rgba(90, 75, 97, 0.85);
+
+  /* White text color */
+  color: white;
+  text-align: center;
+
+  /* Margin so jumbotron is near middle of page */
+  margin-top: 15%;
+}
+
+.img-thumbnail {
+  /* Limit height of profile picture on smaller screens */
+  max-height: 17rem;
 }
