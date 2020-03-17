@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<%- include("partials/header.ejs") %>
+
+<body class="body-index">
+  <!-- Top navbar -->
+  <%- include("partials/navbar-top.ejs") %>
+
+  <!-- Jumbotron -->
+  <div class="container">
+    <div class="jumbotron">
+      <!-- Enclosing row so photo/text are responsive -->
+      <div class="row">
+        <!-- Profile photo (centered in allocated 4/12 space) -->
+        <div class="d-flex col-md-4 justify-content-center align-items-center">
+          <!-- img-thumbnail for responsiveness -->
+          <img src="../public/images/joe-wagner-profile-800.jpg" class="img-thumbnail" alt="Coach Joe Wagner">
+        </div>
+
+        <!-- Profile text -->
+        <div class="col-md-8">
+          <p class="lead mt-3">
+            Joe Wagner is a premier hockey instructor at <a href="http://www.ice-land.com/home" class="text-info" target="_blank" rel="noreferrer noopener">Ice Land</a> in Hamilton Township, NJ with over 20 years of experience.
+          </p>
+
+          <p class="lead d-none d-sm-block">Focus is placed on fundamental skills that benefit modern hockey players. Above all, Joe strives to ensure his students have fun!</p>
+
+          <hr class="my-4">
+
+          <p>Coach Wagner is currently accepting new players.</p>
+
+          <a class="btn btn-info btn-lg" href="/lessons" role="button">View Lessons</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
 </html>
