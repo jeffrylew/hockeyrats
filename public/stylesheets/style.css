@@ -50,7 +50,10 @@ html {
 
 .body-about {
   /* Light purple */
-  background-color: #c5baca;
+  /* background-color: #c5baca; */
+
+  /* Logo gray */
+  background-color: #393e46;
 
   /* Full-body Profile */
   /* background-image: url("./../images/joe-wagner-about_medium.jpg");
@@ -67,6 +70,7 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
+  color: white;
 }
 
 #jumbotron-about {
@@ -82,7 +86,10 @@ html {
 
 .body-lessons {
   /* Light purple */
-  background-color: #c5baca;
+  /* background-color: #c5baca; */
+
+  /* Logo gray */
+  background-color: #393e46;
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
@@ -92,11 +99,15 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
+  color: white;
 }
 
 .body-contact {
   /* Light purple */
-  background-color: #c5baca;
+  /* background-color: #c5baca; */
+
+  /* Logo gray */
+  background-color: #393e46;
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
@@ -106,4 +117,5 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
+  color: white;
 }
