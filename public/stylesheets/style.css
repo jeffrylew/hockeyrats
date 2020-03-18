@@ -50,11 +50,11 @@ html {
 
 .body-about {
   /* Full-body Profile */
-  background-image: url("./../images/joe-wagner-about_medium.jpg");
+  /* background-image: url("./../images/joe-wagner-about_medium.jpg");
 
   background-position: center top;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
@@ -64,6 +64,17 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
+}
+
+#jumbotron-about {
+  /* Group photo */
+  background-image: url("./../images/cornell_hockey-aquatic_cropped.jpg");
+
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 20rem;
 }
 
 .body-lessons {
