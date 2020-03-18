@@ -31,7 +31,7 @@ html {
   font-family: 'Roboto Slab', sans-serif;
 }
 
-.jumbotron {
+#jumbotron-index {
   /* Tritanopia color palette */
   background-color: rgba(90, 75, 97, 0.85);
 
