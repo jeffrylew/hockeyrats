@@ -1,2 +1,2 @@
-# hockeyrats
-Content for hockeyrats.com
+# woohan-hockey
+Content for woohanhockey.com
