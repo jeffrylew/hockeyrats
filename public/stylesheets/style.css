@@ -41,8 +41,8 @@ body {
 }
 
 #jumbotron-about {
-  /* Group photo */
-  background-image: url("./../images/cornell_hockey-aquatic_cropped.jpg");
+  /* Photo by Markus Spiske on Unsplash */
+  background-image: url("./../images/hockey-fight_winter_medium.jpg");
 
   background-position: center top;
   background-size: cover;
