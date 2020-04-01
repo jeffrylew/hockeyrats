@@ -35,18 +35,11 @@ body {
 }
 
 .body-about {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
+  /* Grey */
   background-color: #393e46;
 
-  /* Full-body Profile */
-  /* background-image: url("./../images/joe-wagner-about_medium.jpg");
-
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat; */
+  /* Font color */
+  color: white;
 }
 
 #jumbotron-about {
