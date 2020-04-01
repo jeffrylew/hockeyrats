@@ -15,13 +15,19 @@ body {
 
   /* Padding so fixed-bottom navbar doesn't cover content */
   padding-bottom: 56px;
+
+  /* Gray */
+  background-color: #393e46;
+
+  /* Font color */
+  color: white;
 }
 
 #navbar-top {
   background-color: black;
 }
 
-.body-index {
+#body-index {
   /* Seong stickhandling */
   background-image: url("./../images/woohan_landing_cinematic_medium.jpg");
 
@@ -34,14 +40,6 @@ body {
   margin-top: 15%;
 }
 
-.body-about {
-  /* Gray */
-  background-color: #393e46;
-
-  /* Font color */
-  color: white;
-}
-
 #jumbotron-about {
   /* Group photo */
   background-image: url("./../images/cornell_hockey-aquatic_cropped.jpg");
@@ -51,20 +49,4 @@ body {
   background-repeat: no-repeat;
 
   min-height: 20rem;
-}
-
-.body-media {
-  /* Gray */
-  background-color: #393e46;
-
-  /* Font color */
-  color: white;
-}
-
-.body-contact {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
-  background-color: #393e46;
 }
