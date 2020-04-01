@@ -29,7 +29,7 @@ body {
 
 #body-index {
   /* Seong stickhandling */
-  background-image: url("./../images/woohan_landing_cinematic_medium.jpg");
+  background-image: url("./../images/woo_han_landing_cinematic_medium.jpg");
 
   background-position: center;
   background-size: cover;
@@ -42,7 +42,7 @@ body {
 
 #jumbotron-about {
   /* Photo by Markus Spiske on Unsplash */
-  background-image: url("./../images/hockey-fight_winter_medium.jpg");
+  background-image: url("./../images/hockey-fight_winter_high.jpg");
 
   background-position: center top;
   background-size: cover;
