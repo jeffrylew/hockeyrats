@@ -35,7 +35,7 @@ body {
 }
 
 .body-about {
-  /* Grey */
+  /* Gray */
   background-color: #393e46;
 
   /* Font color */
@@ -53,12 +53,12 @@ body {
   min-height: 20rem;
 }
 
-.body-lessons {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
+.body-media {
+  /* Gray */
   background-color: #393e46;
+
+  /* Font color */
+  color: white;
 }
 
 .body-contact {

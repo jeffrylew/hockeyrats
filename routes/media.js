@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET lessons page. */
+/* GET media page. */
 router.get('/', (req, res, next) => {
-  res.render('lessons');
+  res.render('media');
 });
 
 module.exports = router;
