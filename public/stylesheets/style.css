@@ -5,7 +5,10 @@ html {
 }
 
 body {
-  font-family: 'Bad Script', cursive;
+  /* Font matching logo */
+  /* font-family: 'Bad Script', cursive; */
+
+  font-family: 'Oswald', sans-serif;
 
   /* Padding so fixed-top navbar doesn't cover content */
   padding-top: 68px;
@@ -27,21 +30,8 @@ body {
   background-repeat: no-repeat;
 }
 
-#jumbotron-index {
-  /* Tritanopia color palette */
-  background-color: rgba(90, 75, 97, 0.70);
-
-  /* White text color */
-  color: white;
-  text-align: center;
-
-  /* Margin so jumbotron is near middle of page */
+#deke-div-index {
   margin-top: 15%;
-}
-
-.img-thumbnail {
-  /* Limit height of profile picture on smaller screens */
-  max-height: 17rem;
 }
 
 .body-about {

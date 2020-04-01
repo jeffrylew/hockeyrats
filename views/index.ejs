@@ -4,33 +4,10 @@
   <!-- Top navbar -->
   <%- include("partials/navbar-top.ejs") %>
 
-  <!-- Jumbotron -->
-  <div class="container">
-    <div class="jumbotron" id="jumbotron-index">
-      <!-- Enclosing row so photo/text are responsive -->
-      <div class="row">
-        <!-- Profile photo (centered in allocated 4/12 space) -->
-        <div class="d-flex col-md-4 justify-content-center align-items-center">
-          <!-- img-thumbnail for responsiveness -->
-          <img src="images/joe-wagner-profile-800_medium.jpg" class="img-thumbnail" alt="Coach Joe Wagner">
-        </div>
+  <h1 class="display-4 text-warning font-weight-bolder text-center pt-5 mt-5">Prove Them Wrong</h1>
 
-        <!-- Profile text -->
-        <div class="col-md-8">
-          <p class="lead mt-3">
-            Joe Wagner is a premier hockey instructor at <a href="http://www.ice-land.com/home" class="text-info" target="_blank" rel="noreferrer noopener">Ice Land</a> in Hamilton Township, NJ with over 20 years of experience.
-          </p>
-
-          <p class="lead d-none d-sm-block">Focus is placed on fundamental skills that benefit modern hockey players. Above all, Joe strives to ensure his students have fun!</p>
-
-          <hr class="my-4">
-
-          <p>Coach Wagner is currently accepting new players.</p>
-
-          <a class="btn btn-info btn-lg" href="/lessons" role="button">View Lessons</a>
-        </div>
-      </div>
-    </div>
+  <div class="container d-flex justify-content-center" id="deke-div-index">
+    <a class="btn btn-warning btn-lg" href="/lessons" role="button">Discover Dekes</a>
   </div>
 
 <%- include("partials/footer.ejs") %>
