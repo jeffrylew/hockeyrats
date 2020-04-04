@@ -4,22 +4,9 @@ html {
   height: 100%;
 }
 
-#navbar-top {
-  /* Carnellian */
-  background-color: #b31b1b;
-}
-
-/* .navbar-brand {
-  text-transform: uppercase;
-} */
-
-.body-index {
-  /* Seong flexing stick */
-  background-image: url("./../images/seong-stick-flex_medium.jpg");
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+body {
+  /* Logo gray */
+  background-color: #393e46;
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
@@ -29,6 +16,21 @@ html {
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
+  color: white;
+}
+
+#navbar-top {
+  /* Carnellian */
+  background-color: #b31b1b;
+}
+
+#body-index {
+  /* Seong flexing stick */
+  background-image: url("./../images/seong-stick-flex_medium.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #jumbotron-index {
@@ -48,74 +50,13 @@ html {
   max-height: 17rem;
 }
 
-.body-about {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
-  background-color: #393e46;
-
-  /* Full-body Profile */
-  /* background-image: url("./../images/joe-wagner-about_medium.jpg");
-
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat; */
-
-  /* Padding so fixed-top navbar doesn't cover content */
-  /* padding-top: 56px; */
-  padding-top: 68px;
-
-  /* Padding so fixed-bottom navbar doesn't cover content */
-  padding-bottom: 56px;
-
-  font-family: 'Roboto Slab', sans-serif;
-  color: white;
-}
-
 #jumbotron-about {
-  /* Group photo */
-  background-image: url("./../images/cornell_hockey-aquatic_cropped.jpg");
+  /* Unsplash photo from Arthur Edelman */
+  background-image: url("./../images/arthur-edelman-unsplash_bueno_medium.jpg");
 
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 
   min-height: 20rem;
-}
-
-.body-lessons {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
-  background-color: #393e46;
-
-  /* Padding so fixed-top navbar doesn't cover content */
-  /* padding-top: 56px; */
-  padding-top: 68px;
-
-  /* Padding so fixed-bottom navbar doesn't cover content */
-  padding-bottom: 56px;
-
-  font-family: 'Roboto Slab', sans-serif;
-  color: white;
-}
-
-.body-contact {
-  /* Light purple */
-  /* background-color: #c5baca; */
-
-  /* Logo gray */
-  background-color: #393e46;
-
-  /* Padding so fixed-top navbar doesn't cover content */
-  /* padding-top: 56px; */
-  padding-top: 68px;
-
-  /* Padding so fixed-bottom navbar doesn't cover content */
-  padding-bottom: 56px;
-
-  font-family: 'Roboto Slab', sans-serif;
-  color: white;
 }
