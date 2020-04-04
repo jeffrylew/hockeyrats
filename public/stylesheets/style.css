@@ -28,6 +28,8 @@ body {
   /* Seong flexing stick */
   background-image: url("./../images/seong-stick-flex_medium.jpg");
 
+  background-color: transparent;
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
