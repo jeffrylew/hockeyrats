@@ -62,3 +62,25 @@ body {
 
   min-height: 20rem;
 }
+
+#body-lessons {
+  padding-top: 0;
+}
+
+#jumbotron-lessons {
+  position: relative;
+  height: 35rem;
+  overflow: hidden;
+}
+
+#lessons-video {
+  /* Style lessons video in jumbotron-lessons */
+  min-height: 35rem;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  object-fit: cover;
+}
