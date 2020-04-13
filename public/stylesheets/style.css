@@ -84,3 +84,14 @@ body {
   -webkit-transform: translate(-50%, -50%);
   object-fit: cover;
 }
+
+/* For md screens and up, allow seven cols for lessons calendar */
+@media (min-width: 768px) {
+  .seven-cols .col {
+    max-width: 14.285714285714285714285714285714%;
+  }
+
+  .card {
+    border-radius: 0rem;
+  }
+}

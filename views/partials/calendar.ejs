@@ -1,0 +1,64 @@
+<div class="calendar justify-content-center text-dark pb-5">
+  <div class="d-flex justify-content-center align-items-center">
+    <i class="fa fa-calendar fa-3x text-white mr-3"></i>
+    <h1 class="display-4 my-4 text-white text-center">
+      <%= new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long'}).format(new Date()) %>
+    </h1>
+  </div>
+
+  <div class="row seven-cols font-weight-bold text-white text-uppercase text-center mb-2">
+    <div class="col d-none d-md-table-cell">Sun</div>
+    <div class="col d-none d-md-table-cell">Mon</div>
+    <div class="col d-none d-md-table-cell">Tue</div>
+    <div class="col d-none d-md-table-cell">Wed</div>
+    <div class="col d-none d-md-table-cell">Thu</div>
+    <div class="col d-none d-md-table-cell">Fri</div>
+    <div class="col d-none d-md-table-cell">Sat</div>
+  </div>
+
+  <div class="row row-cols-1 seven-cols">
+    <% dates.forEach(date => { %>
+      <div class="col px-3 px-md-0 pb-3 pb-md-0">
+        <div class="card h-100">
+          <div class="card-body p-3 p-md-2">
+            <!-- Date at top right corner -->
+            <% if (!isThisMonth(date)) { %>
+            <p class="card-title font-weight-bold text-black-50 text-right">
+            <% } else if (isToday(date)) { %>
+            <p class="card-title font-weight-bold text-danger text-right">
+            <% } else { %>
+            <p class="card-title font-weight-bold text-right">
+            <% } %>
+              <!-- Display weekday, month, and day for smaller screens -->
+              <span class="d-inline d-md-none">
+                <%= new Intl.DateTimeFormat('en-US', {weekday: 'long', month: 'long', day: 'numeric'}).format(date) %>
+              </span>
+              
+              <!-- Only display day of month for screens sizes md and larger -->
+              <span class="d-none d-md-inline">
+                <%= date.getDate() %>
+              </span>
+            </p>
+
+            <!-- Buttons for reserving lessons -->
+            <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="Buttons for reserving lesson time slots">
+              <% if (isWednesday(date)) { %>
+              <button type="button" class="btn btn-outline-info btn-sm btn-block" disabled aria-disabled="true">
+                6-7 AM
+                <span class="badge badge-pill badge-primary">2 slots left</span>
+                <span class="sr-only">Number of available slots</span>
+              </button>
+              <% } else { %>
+              <button type="button" class="btn btn-outline-info btn-sm btn-block" disabled aria-disabled="true">6-7 AM</button>
+              <% } %>
+
+              <button type="button" class="btn btn-outline-info btn-sm btn-block" disabled aria-disabled="true">7-8 AM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+
+  </div>
+
+</div>
