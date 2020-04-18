@@ -4,17 +4,17 @@ const router = express.Router();
 /* GET lessons page. */
 router.get('/', (req, res, next) => {
 
-  // Declare variables for lessons calendar
-  const today = new Date();
-  const year  = today.getFullYear();
-  const month = today.getMonth();
-  
   // date-fns function declarations
+  const utcToZonedTime    = require('date-fns-tz/utcToZonedTime');
   const startOfMonth      = require('date-fns/startOfMonth');
   const eachDayOfInterval = require('date-fns/eachDayOfInterval');
   const subDays           = require('date-fns/subDays');
   const endOfMonth        = require('date-fns/endOfMonth');
   const addDays           = require('date-fns/addDays');
+
+  // Declare variables for lessons calendar
+  const todayUTC = new Date();
+  const today    = utcToZonedTime(todayUTC, 'America/New_York');
 
   // First and last day of current month
   const firstDayOfMonth = startOfMonth(today);
@@ -76,6 +76,7 @@ router.get('/', (req, res, next) => {
   res.render('lessons',
             {
               dates: dates,
+              utcToZonedTime: utcToZonedTime,
               isThisMonth: isThisMonth,
               isToday: isToday,
               isWednesday: isWednesday
