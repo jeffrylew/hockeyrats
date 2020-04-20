@@ -32,6 +32,20 @@
       <!-- Toggler/hamburger dropdown divider between left and right side links -->
       <div class="dropdown-divider d-block d-md-none"></div>
 
+      <!-- Navbar for cart -->
+      <ul class="navbar-nav mr-1">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#cart">
+            <p class="d-inline d-md-none">View Cart</p>
+            <i class="fas fa-shopping-cart fa-lg d-none d-md-inline"></i>
+            <span class="badge badge-light ml-1" id="cart-total-items"></span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Divider between cart and social media -->
+      <div class="dropdown-divider d-block d-md-none"></div>
+
       <!-- Navbar right: External links (Facebook, Instagram, Twitter) -->
       <!-- Text-only until md screen size then logo-only for larger screens -->
       <ul class="navbar-nav">
@@ -58,3 +72,6 @@
     </div>
   </div>
 </nav>
+
+<!-- Include modal for cart -->
+<%- include("cart.ejs") %>

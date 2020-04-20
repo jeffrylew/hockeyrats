@@ -24,6 +24,15 @@ body {
   background-color: #b31b1b;
 }
 
+#cart {
+  color: black;
+}
+
+#cart #cart-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
 #body-index {
   /* Seong flexing stick */
   background-image: url("./../images/seong-stick-flex_medium.jpg");

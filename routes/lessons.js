@@ -72,6 +72,7 @@ router.get('/', (req, res, next) => {
   const isThisMonth = require('date-fns/isThisMonth');
   const isToday     = require('date-fns/isToday');
   const isWednesday = require('date-fns/isWednesday');
+  const format      = require('date-fns/format');
 
   res.render('lessons',
             {
@@ -79,7 +80,8 @@ router.get('/', (req, res, next) => {
               utcToZonedTime: utcToZonedTime,
               isThisMonth: isThisMonth,
               isToday: isToday,
-              isWednesday: isWednesday
+              isWednesday: isWednesday,
+              format: format
             });
 });
 
