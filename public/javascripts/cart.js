@@ -148,7 +148,7 @@ class Cart {
     } else {
       this.cart.forEach(item => {
         table_contents += "<tr>"
-          + "<td><button type='button' class='close float-left delete-item' aria-label='Delete cart item' data-name='" + item.name + "'><span aria-hidden='true' data-name='" + item.name + "'>&times;</span></button></td>"
+          + "<td><button type='button' class='close float-left delete-item' aria-label='Delete cart item' data-name='" + item.name + "'><span aria-hidden='true'>&times;</span></button></td>"
           + "<td>" + item.name + "</td>"
           + "<td><button class='btn btn-outline-info btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='mx-2'>"
           + item.qty
@@ -190,7 +190,7 @@ cart.display();
 $('.add-to-cart').click(event => {
   event.preventDefault();
 
-  const btn   = $(event.target);
+  const btn   = $(event.target).closest("button");
   const name  = btn.data('name');
   const price = Number(btn.data('price'));
 
@@ -225,7 +225,7 @@ $('#cart-table').on("click", ".decrement-qty", event => {
 
 // *** Remove all instances of item button ***
 $('#cart-table').on("click", ".delete-item", event => {
-  const btn = $(event.target);
+  const btn = $(event.target).closest("button");
   cart.removeItemAll(btn.data('name'));
   cart.display();
 });

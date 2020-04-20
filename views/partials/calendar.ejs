@@ -18,7 +18,7 @@
 
   <div class="row row-cols-1 seven-cols">
     <% dates.forEach(dateUTC => { %>
-      <% const date = utcToZonedTime(dateUTC, 'America/New_York'); %>
+      <% let date = utcToZonedTime(dateUTC, 'America/New_York'); %>
 
       <div class="col px-3 px-md-0 pb-3 pb-md-0">
         <div class="card h-100">
@@ -44,15 +44,21 @@
 
             <!-- Buttons for reserving lessons -->
             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="Buttons for reserving lesson time slots">
+              <!-- Set date time to 6 AM -->
+              <% date.setHours(6, 0) %>
+
               <% if (isWednesday(date)) { %>
-              <button type="button" class="btn btn-outline-info btn-sm btn-block" disabled aria-disabled="true">
-                6-7 AM
+              <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="50.00">
+                <span>6-7 AM</span>
                 <span class="badge badge-pill badge-primary">2 slots left</span>
                 <span class="sr-only">Number of available slots</span>
               </button>
               <% } else { %>
-              <button type="button" class="btn btn-outline-info btn-sm btn-block" disabled aria-disabled="true">6-7 AM</button>
+              <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="50.00">6-7 AM</button>
               <% } %>
+
+              <!-- Set date time to 7 AM -->
+              <% date.setHours(7, 0) %>
 
               <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="50.00">7-8 AM</button>
             </div>
