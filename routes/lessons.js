@@ -71,6 +71,7 @@ router.get('/', (req, res, next) => {
   // Additional date-fns functions to pass to calendar.ejs
   const isThisMonth = require('date-fns/isThisMonth');
   const isToday     = require('date-fns/isToday');
+  const isPast      = require('date-fns/isPast');
   const isWednesday = require('date-fns/isWednesday');
   const format      = require('date-fns/format');
 
@@ -80,6 +81,7 @@ router.get('/', (req, res, next) => {
               utcToZonedTime: utcToZonedTime,
               isThisMonth: isThisMonth,
               isToday: isToday,
+              isPast: isPast,
               isWednesday: isWednesday,
               format: format
             });
