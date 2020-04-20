@@ -94,8 +94,8 @@ body {
   object-fit: cover;
 }
 
-/* For md screens and up, allow seven cols for lessons calendar */
-@media (min-width: 768px) {
+/* For lg screens and up, allow seven cols for lessons calendar */
+@media (min-width: 992px) {
   .seven-cols .col {
     max-width: 14.285714285714285714285714285714%;
   }
