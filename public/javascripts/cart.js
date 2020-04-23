@@ -149,10 +149,10 @@ class Cart {
       this.cart.forEach(item => {
         table_contents += "<tr>"
           + "<td><button type='button' class='close float-left delete-item' aria-label='Delete cart item' data-name='" + item.name + "'><span aria-hidden='true'>&times;</span></button></td>"
-          + "<td>" + item.name + "</td>"
-          + "<td><button class='btn btn-outline-info btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='mx-2'>"
+          + "<td>" + item.name.substr(0, 11) + "<br class='d-inline d-md-none'>" + item.name.substr(11) + "</td>"
+          + "<td class='row justify-content-center'><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='col-sm-3'>"
           + item.qty
-          + "</span><button class='btn btn-outline-info btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
+          + "</span><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
           + "<td>$" + Number(item.qty * item.price).toFixed(2) + "</td>"
           + "</tr>"
       });
