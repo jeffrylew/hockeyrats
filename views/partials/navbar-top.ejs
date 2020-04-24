@@ -73,5 +73,10 @@
   </div>
 </nav>
 
+<!-- Alert when adding to cart for smaller screens -->
+<div class="alert alert-fixed alert-success fade show rounded-0 d-none d-lg-none" role="alert">
+  Added <span id="cart-item-name"></span> to <a href="#" class="text-primary" data-toggle="modal" data-target="#cart">cart.</a>
+</div>
+
 <!-- Include modal for cart -->
 <%- include("cart.ejs") %>

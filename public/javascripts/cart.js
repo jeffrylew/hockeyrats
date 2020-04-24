@@ -196,6 +196,15 @@ $('.add-to-cart').click(event => {
 
   cart.addItem(name, price);
   cart.display();
+
+  // For small screen sizes, display alert under top navbar
+  $('.alert-fixed #cart-item-name').html(name);
+  $('.alert-fixed').removeClass('d-none');
+
+  // Auto-close alert after 3 seconds
+  setTimeout(() => {
+    $('.alert-fixed').addClass('d-none');
+  }, 3000);
 });
 
 // *** Clear all items from cart ***

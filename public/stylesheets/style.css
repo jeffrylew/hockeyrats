@@ -33,6 +33,17 @@ body {
   vertical-align: middle;
 }
 
+.alert-fixed {
+  position: fixed;
+
+  /* Padding so fixed-top navbar doesn't cover content */
+  margin-top: 68px;
+
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
 #body-index {
   /* Seong flexing stick */
   background-image: url("./../images/seong-stick-flex_medium.jpg");
