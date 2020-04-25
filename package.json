@@ -24,6 +24,7 @@
     "date-fns": "^2.12.0",
     "date-fns-tz": "^1.0.10",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
