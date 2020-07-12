@@ -1,0 +1,118 @@
+<%- include("partials/header.ejs") %>
+
+<body id="body-success">
+  <!-- Top navbar -->
+  <%- include("partials/navbar-top.ejs") %>
+
+  <div class="container my-4">
+    <h1 class="display-4 text-center pt-2 mb-5">Thank You!</h1>
+
+    <p class="pb-3">Order ID <%- session_id.substring(8, 15) %> was successful. A confirmation email with the order summary has been sent.</p>
+
+    <p class="pb-3">Hockeyrats offers a discount for providing lesson referrals. Please contact Coach Joe Wagner for additional details.</p>
+
+    <p class="pb-4">Note that a refund or credit for a later date will not be given if you do not show up for the lesson you have prepaid for/reserved without prior notice. Lesson cancellation requests should be made at least 24 hours in advance.</p>
+
+    <h2 class="text-center pb-3">COVID-19 Precautions</h2>
+
+    <p>If you are not feeling well or have been exposed to someone who isn't feeling well, please stay home! If you have been to any of the following states within the last 14 days, you are advised to self-quarantine for the safety of all staff, coaches, and hockey players:</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>Alabama</li>
+            <li>Arkansas</li>
+            <li>Arizona</li>
+            <li>California</li>
+            <li>Delaware</li>
+            <li>Florida</li>
+            <li>Georgia</li>
+            <li>Iowa</li>
+            <li>Idaho</li>
+            <li>Kansas</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li>Louisiana</li>
+            <li>Mississippi</li>
+            <li>North Carolina</li>
+            <li>Nevada</li>
+            <li>Oklahoma</li>
+            <li>South Carolina</li>
+            <li>Tennessee</li>
+            <li>Texas</li>
+            <li>Utah</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="pb-2">For lessons at <a href="http://www.ice-land.com/home" class="text-info" target="_blank" rel="noreferrer noopener">Ice Land</a>, please show up no more than 10 minutes before the lesson start time to be compliant with their protocols. The facility door closest to the ramp will be the only entrance available for use.</p>
+
+    <p class="pb-2">Parents and players must wear masks for the duration of their stay in the lobby and common areas. Players may take their masks off once on the ice.</p>
+
+    <p class="pb-2">It is recommended for hockey players to arrive at the rink dressed, as best as they can. Rink-side benches will be available for use but locker rooms will not be open.</p>
+
+    <p class="pb-3">A waiver for Ice Land rink should be signed before entering the ice. A copy of this waiver has been provided below for review:</p>
+
+    <h2 class="text-center py-0">WAIVER OF LIABILITY</h2>
+    <h5 class="text-center py-0">ICE SKATING RINK PARTICIPANT</h5>
+    <h5 class="text-center py-0">RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT</h5>
+    <h5 class="text-center pb-3">-- READ BEFORE AGREEING TO THIS --</h5>
+
+    <p>The risk of injury from the activities involved in this program is significant, including the potential for permanent paralysis and death,  and while particular rules, equipment, and personal discipline may reduce this risk, the risk of serious injury does exist; and,  </p>
+
+    <p>I KNOWINGLY AND FREELY ASSUME ALL SUCH RISKS,  both known and unknown of my participation in the Program, EVEN IF ARISING FROM THE NEGLIGENCE OF THE RELEASEES or others, and assume full responsibility for my participation; and,  </p>
+ 
+    <p>I willingly agree to comply with the stated and customary terms and conditions for participation in the Program.  If, however, I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately; and,  </p>
+
+    <p class="pb-2">I, for myself and on behalf of my heirs, assigns, personal representatives and next of kin, HEREBY RELEASE, INDEMNIFY, AND HOLD HARMLESS Arena, their officers, officials, agents and/or employees, other participants, sponsoring agencies, sponsors, advertisers, and, if applicable, owners and lessors of premises used to conduct the event (“Releasees”), WITH RESPECT TO ANY AND ALL INJURY, DISABILITY, DEATH, or loss or damage to person or property, WHETHER ARISING FROM THE NEGLIGENCE OF THE RELEASEES OR OTHERWISE, to the fullest extent permitted by law.</p>
+ 
+    <p class="pb-2">Should any disputes, claims or litigation arise regarding Arena or its affiliates and Participants or the undersigned, I agree that the Prevailing Party (defined below) shall be  entitled to recover all of the reasonable costs, expenses, and fees including reasonable attorney fees incurred in connection with such dispute, claim or litigation as determined by a final judgment of a court  The term “Prevailing Party” means that party whose position in the claim, dispute or litigation is substantially upheld. </p>
+
+    <p class="pb-2">If any part of this agreement is determined to be void and unenforceable, the remainder shall remain in full force and effect. </p>
+
+    <p class="pb-2">This Agreement shall be governed by the laws of the state of Delaware.  Furthermore, I acknowledge that  the novel coronavirus, COVID-19, has been declared a worldwide pandemic by the World Health Organization. COVID-19 is extremely contagious and spreads from person-to-person contact.</p>
+
+    <p class="pb-2">Arena has put in place preventative measures to reduce the spread of communicable diseases; however, we cannot guarantee that you or your child(ren) will not become infected while attending our facilities. While we’ve implemented reasonable preventive measures, we depend on each and every visitor and their families to follow the guidelines from the Center of Disease Control, and all applicable federal, state, and local health department guidelines, rules, laws, and regulations before and while visiting our premises. We are all in this together and rely on each other to adhere to the above-mentioned guidance and legal restrictions. The undersigned fully understands and acknowledges both the known and potential dangers of utilizing our facilities, services, and programs and acknowledge that use thereof by the undersigned and/or such participating children may, despite our reasonable best efforts to mitigate such dangers, result in exposure to communicable diseases, which could result in quarantine requirements, serious illness, disability, and/or death. </p>
+
+    <p class="pb-4">I HAVE READ THIS RELEASE OF LIABILITY AND ASSUMPTION OF RISK AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I HAVE GIVEN UP SUBSTANTIAL RIGHTS BY SIGNING IT, AND AGREE TO IT FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT.</p>
+ 
+    <p>FOR PARENTS/GUARDIANS OF PARTICIPANTS OF MINORITY AGE</p>
+    <p class="pb-2">(UNDER AGE 18 AT TIME OF REGISTRATION)</p>
+ 
+    <p class="pb-3">This is to certify that I, as parent/guardian with legal responsibility for this participant, do consent and agree to his/her release as provided above of all the Releasees, and, for myself, my heirs, assigns, and next of kin, I release and agree to indemnify and hold harmless the Releasees from any and all liabilities incident to my minor child’s involvement or participation in these programs as provided above,  EVEN IF ARISING FROM THE NEGLIGENCE OF THE RELEASEES,  to the fullest extent permitted by law.</p>
+
+    <pre></pre>
+
+  </div>
+
+  <!-- Stripe Verification -->
+  <script charset="utf-8">
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id');
+
+    if (sessionId)
+    {
+      fetch('/order?sessionId=' + sessionId)
+        .then(result => {
+          return result.json();
+        })
+        .then(session => {
+          const sessionJSON = JSON.stringify(session, null, 2);
+          // $('pre').html(sessionJSON);
+          // document.querySelector('pre').textContent = sessionJSON;
+
+          // Clear cart
+          $('#clear-cart').click();
+        })
+        .catch(err => {
+          console.log('Error when fetching Checkout session', err);
+        });
+    }
+  </script>
+
+<%- include("partials/footer.ejs") %>

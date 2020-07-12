@@ -238,3 +238,55 @@ $('#cart-table').on("click", ".delete-item", event => {
   cart.removeItemAll(btn.data('name'));
   cart.display();
 });
+
+
+// *** Stripe Integration ***
+
+// *** Handle any error returns from Checkout ***
+var handleResult = function(result) {
+  if (result.error) {
+    $('#error-message').html(result.error.message);
+  }
+}
+
+// *** Create a Checkout Session with cart items in req body ***
+var createCheckoutSession = function () {
+  return fetch('/order', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      items: cart.cart
+    }),
+  }).then(result => {
+    return result.json();
+  });
+};
+
+// *** Submit order event handler ***
+fetch('/order/config')
+  .then(result => {
+    return result.json();
+  })
+  .then(json => {
+    window.config = json;
+    const stripe = Stripe(config.publicKey);
+
+    // Load and display cart
+    cart.load();
+    cart.display();
+
+    // Setup event handler to create Checkout Session on submit
+    $('#order-btn').click(event => {
+      event.preventDefault();
+
+      createCheckoutSession().then(data => {
+        stripe
+          .redirectToCheckout({
+            sessionId: data.sessionId,
+          })
+          .then(handleResult);
+      });
+    });
+  });
