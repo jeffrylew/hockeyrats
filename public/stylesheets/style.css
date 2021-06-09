@@ -131,6 +131,12 @@ body {
   max-height: 17rem;
 }
 
+#view-lessons-button {
+  color: white;
+  background-color: #84d4f7;
+  border-color: #84d4f7;
+}
+
 #jumbotron-about {
   /* Unsplash photo from Arthur Edelman */
   background-image: url("./../images/arthur-edelman-unsplash_bueno_medium.jpg");
