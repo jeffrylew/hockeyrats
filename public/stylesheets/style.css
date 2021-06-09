@@ -106,7 +106,10 @@ body {
   /* Seong flexing stick */
   background-image: url("./../images/seong-stick-flex_medium.jpg");
 
-  background-color: transparent;
+  /* background-color: transparent; */
+
+  /* Background color matches color of ice */
+  background-color: #dce2e0;
 
   background-position: center;
   background-size: cover;
