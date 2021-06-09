@@ -46,6 +46,10 @@ body {
   border-color: rgba(255,255,255,.7);
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(34,152,216,1);
+}
+
 #navbar-top {
   /* Carnellian */
   /* background-color: #b31b1b; */
