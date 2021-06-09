@@ -21,7 +21,34 @@ body {
 
 #navbar-top {
   /* Carnellian */
-  background-color: #b31b1b;
+  /* background-color: #b31b1b; */
+
+  background-color: transparent;
+}
+
+#navbar-logo {
+  max-width: 250px;
+}
+
+/* For sm screens and up */
+@media (min-width: 576px) {
+  #navbar-logo {
+    max-width: 300px;
+  }
+}
+
+/* For md screens and up */
+@media (min-width: 768px) {
+  #navbar-logo {
+    max-width: 350px;
+  }
+}
+
+/* For lg screens and up */
+@media (min-width: 992px) {
+  #navbar-logo {
+    max-width: 400px;
+  }
 }
 
 #cart {
