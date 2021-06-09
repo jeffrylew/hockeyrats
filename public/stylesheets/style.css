@@ -10,13 +10,35 @@ body {
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
-  padding-top: 68px;
+  /* padding-top: 68px; */
+  padding-top: 129.16px;
 
   /* Padding so fixed-bottom navbar doesn't cover content */
   padding-bottom: 56px;
 
   font-family: 'Roboto Slab', sans-serif;
   color: white;
+}
+
+/* For sm screens and up */
+@media (min-width: 576px) {
+  body {
+    padding-top: 149.78px;
+  }
+}
+
+/* For md screens and up */
+@media (min-width: 768px) {
+  body {
+    padding-top: 170.41px;
+  }
+}
+
+/* For lg screens and up */
+@media (min-width: 992px) {
+  body {
+    padding-top: 191.05px;
+  }
 }
 
 .navbar-dark .navbar-toggler {
