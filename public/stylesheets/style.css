@@ -19,6 +19,11 @@ body {
   color: white;
 }
 
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.7);
+}
+
 #navbar-top {
   /* Carnellian */
   /* background-color: #b31b1b; */
