@@ -6,7 +6,9 @@ html {
 
 body {
   /* Logo gray */
-  background-color: #393e46;
+  /* background-color: #393e46; */
+
+  background-color: black;
 
   /* Padding so fixed-top navbar doesn't cover content */
   /* padding-top: 56px; */
