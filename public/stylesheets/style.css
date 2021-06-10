@@ -43,13 +43,17 @@ body {
   }
 }
 
+a {
+  color: rgb(34, 152, 216);
+}
+
 .navbar-dark .navbar-toggler {
   color: rgba(255,255,255,.9);
   border-color: rgba(255,255,255,.7);
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(34,152,216,1);
+  color: rgb(34, 152, 216);
 }
 
 #navbar-top {
