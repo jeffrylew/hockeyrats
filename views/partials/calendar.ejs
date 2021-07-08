@@ -40,26 +40,30 @@
               </span>
             </p>
 
-            <!-- Buttons for reserving lessons -->
+            <!-- Buttons for reserving lessons (only enable on weekdays) -->
+            <% if (!isSaturday(date) && !isSunday(date)) { %>
             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="Buttons for reserving lesson time slots">
               <!-- Set date time to 6 AM -->
               <% date.setHours(6, 0) %>
 
-              <% if (isWednesday(date)) { %>
-                <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>
-                  <span>6-7 AM</span>
-                  <span class="badge badge-pill badge-primary">2 slots left</span>
-                  <span class="sr-only">Number of available slots</span>
-                </button>
-              <% } else { %>
-                <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>6-7 AM</button>
-              <% } %>
+              <button type="button" class="btn btn-outline-primary btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>6-7 AM</button>
 
               <!-- Set date time to 7 AM -->
               <% date.setHours(7, 0) %>
 
-              <button type="button" class="btn btn-outline-info btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>7-8 AM</button>
+              <% if (isFriday(date)) { %>
+                <button type="button" class="btn btn-outline-primary btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>
+                  <span>7-8 AM</span>
+                  <span class="badge badge-pill badge-primary">Group</span>
+                  <span class="sr-only">Slot for group lesson</span>
+                </button>
+              <% } else { %>
+                <button type="button" class="btn btn-outline-primary btn-sm btn-block add-to-cart" data-name="<%= format(date, 'Pp') %>" data-price="80.00" <% if (isPast(date)){ %>disabled<% } %>>7-8 AM</button>
+              <% } %>
+
             </div>
+            <% } %>
+
           </div>
         </div>
       </div>
