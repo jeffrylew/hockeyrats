@@ -131,7 +131,7 @@ class Cart {
 
     if (!Array.isArray(this.cart) || !this.cart.length) {
       // Array does not exist, is not an array, or is empty
-      table_contents = "Your cart is empty"
+      table_contents = "You have no reservations"
 
       // Clear cart notification badge
       $('#cart-total-items').empty();
@@ -140,7 +140,7 @@ class Cart {
       $('#clear-cart').addClass('d-none');
 
       // Hide cart total
-      $('#cart-total-price').empty();
+      // $('#cart-total-price').empty();
 
       // Disable Order Now button
       $('#order-btn').prop('disabled', true);
@@ -150,10 +150,10 @@ class Cart {
         table_contents += "<tr>"
           + "<td><button type='button' class='close float-left delete-item' aria-label='Delete cart item' data-name='" + item.name + "'><span aria-hidden='true'>&times;</span></button></td>"
           + "<td>" + item.name.substr(0, 11) + "<br class='d-inline d-md-none'>" + item.name.substr(11) + "</td>"
-          + "<td class='row justify-content-center'><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='col-sm-3'>"
+          + "<td class='row justify-content-center'><button class='col-3 col-lg-2 btn btn-outline-primary btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='col-3 col-lg-2'>"
           + item.qty
-          + "</span><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
-          + "<td>$" + Number(item.qty * item.price).toFixed(2) + "</td>"
+          + "</span><button class='col-3 col-lg-2 btn btn-outline-primary btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
+          // + "<td>$" + Number(item.qty * item.price).toFixed(2) + "</td>"
           + "</tr>"
       });
 
@@ -164,7 +164,7 @@ class Cart {
       $('#clear-cart').removeClass('d-none');
 
       // Evaluate cart total if totalItems > 0
-      $('#cart-total-price').html("Total: $" + this.getTotalPrice());
+      // $('#cart-total-price').html("Total: $" + this.getTotalPrice());
 
       // Enable Order Now button
       $('#order-btn').prop('disabled', false);
