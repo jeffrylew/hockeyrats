@@ -240,6 +240,27 @@ $('#cart-table').on("click", ".delete-item", event => {
 });
 
 
+// *** Email Reservation System ***
+$('#order-btn').click(event => {
+  event.preventDefault();
+
+  fetch('/reserve', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      items: cart.cart
+    }),
+  }).then(result => {
+    if (result.error) {
+      console.error(result.error.message);
+    }
+  });
+});
+
+
+/*
 // *** Stripe Integration ***
 
 // *** Handle any error returns from Checkout ***
@@ -290,3 +311,4 @@ fetch('/order/config')
       });
     });
   });
+*/
