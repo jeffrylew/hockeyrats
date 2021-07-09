@@ -20,6 +20,7 @@
     "url": "https://github.com/jeffrylew/hockeyrats/issues"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
     "cookie-parser": "~1.4.5",
     "date-fns": "^2.14.0",
     "date-fns-tz": "^1.0.10",
