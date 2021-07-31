@@ -97,6 +97,10 @@ a {
   vertical-align: middle;
 }
 
+#cartMsg {
+  resize: none;
+}
+
 .alert-fixed {
   position: fixed;
 
