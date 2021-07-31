@@ -25,10 +25,35 @@
         <div class="d-block text-danger text-center" id="error-message"></div>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+      <div class="modal-footer justify-content-center">
+        <form>
+          <div class="modal-form-element form-row d-none">
+            <div class="form-group col-lg-4">
+              <label for="cartName" class="sr-only">Name</label>
+              <input type="text" class="form-control" id="cartName" placeholder="Name*" required>
+            </div>
+            <div class="form-group col-lg-4">
+              <label for="cartEmail" class="sr-only">Email</label>
+              <input type="email" class="form-control" id="cartEmail" placeholder="Email*" required>
+            </div>
+            <div class="form-group col-lg-4">
+              <label for="cartPhone" class="sr-only">Phone Number</label>
+              <input type="tel" class="form-control" id="cartPhone" placeholder="Phone Number*" required>
+            </div>
+          </div>
 
-        <button type="button" class="btn btn-primary" id="order-btn">Reserve Now</button>
+          <div class="modal-form-element form-group d-none">
+            <label for="cartMsg" class="sr-only">Optional message to coach</label>
+            <textarea class="form-control" id="cartMsg" placeholder="Optional message to coach"></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-secondary mr-1" data-dismiss="modal">Close</button>
+
+            <button type="button" class="btn btn-primary" id="order-btn">Reserve Now</button>
+          </div>
+
+        </form>
       </div>
 
     </div>
