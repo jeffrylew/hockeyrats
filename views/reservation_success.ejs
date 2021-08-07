@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<body id="body-success">
+  <!-- Top navbar -->
+  <%- include("partials/navbar-top.ejs") %>
+
+  <div class="container my-4">
+    <h1 class="display-4 text-center pt-2 mb-5">Thank You!</h1>
+
+    <p class="pb-3">Reservation ID <%- order_id %> was successful. A confirmation email with the summary of your request has been sent.</p>
+
+    <p class="pb-3">Lessons will be held at <a href="https://proskatenj.com/" target="_blank" rel="noreferrer noopener">ProSkate Ice Arena</a> at 1000 Cornwall Rd, Monmouth Junction, NJ 08852 unless arranged otherwise with Coach Joe. The hockey lesson ice fee should be paid directly to ProSkate <a href="https://app.mysportsort.com/view/index.php?an=343&myss_source=register&entitytype=4&entityid=1288" target="_blank" rel="noreferrer noopener">through their website</a> prior to the scheduled session.</p>
+
+    <p class="pb-3">If a lesson cancellation request needs to be made, please <a href="/contact" target="_blank" rel="noreferrer noopener">contact</a> Coach Joe at least 24 hours in advance.</p>
+
+    <p class="pb-4">Hockeyrats offers a discount for providing lesson referrals. Please <a href="/contact" target="_blank" rel="noreferrer noopener">contact</a> Coach Joe for additional details.</p>
+
+    <h2 class="text-center pb-3">COVID-19 Precautions</h2>
+
+    <p class="pb-4">If you are not feeling well or have been exposed to someone who isn't feeling well, please stay home and notify Coach Joe.</p>
+
+    <h2 class="text-center pb-3">WAIVER OF LIABILITY</h2>
+
+    <p>There is an inherent risk of exposure to COVID-19 in any public place where people are present. COVID-19 is an extremely contagious disease that can lead to severe illness and death. According to the CDC, senior citizens and guests with underlying medical conditions are especially vulnerable. BY PURCHASING LESSONS, YOU VOLUNTARILY ASSUME ALL RISKS RELATED TO EXPOSURE TO COVID-19. JOSEPH WAGNER DISCLAIMS ANY AND ALL LIABILITY RELATED THERETO.</p>
+
+  </div>
+
+<%- include("partials/footer.ejs") %>
