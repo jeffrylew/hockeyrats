@@ -46,7 +46,7 @@ const requestEmailJoe = (body, order_id) => {
     to: [
       {
         name: 'Joe Wagner',
-        email: 'josephwagner74@yahoo.com'
+        email: 'jeffryklew@gmail.com'
       },
     ],
     from: 'support@hockeyrats.com',
