@@ -139,6 +139,14 @@ class Cart {
       // Hide Clear Cart link
       $('#clear-cart').addClass('d-none');
 
+      // Right-align Close and Reserve Now buttons in Cart modal
+      $('div.modal-footer')
+      .removeClass('justify-content-center')
+      .addClass('justify-content-end');
+
+      // Hide form elements from Cart modal
+      $('div.modal-form-element').addClass('d-none');
+
       // Hide cart total
       // $('#cart-total-price').empty();
 
@@ -162,6 +170,14 @@ class Cart {
 
       // Show Clear Cart link
       $('#clear-cart').removeClass('d-none');
+
+      // Center form elements in Cart modal
+      $('div.modal-footer')
+      .removeClass('justify-content-end')
+      .addClass('justify-content-center');
+
+      // Show form elements in Cart modal
+      $('div.modal-form-element').removeClass('d-none');
 
       // Evaluate cart total if totalItems > 0
       // $('#cart-total-price').html("Total: $" + this.getTotalPrice());
@@ -240,23 +256,62 @@ $('#cart-table').on("click", ".delete-item", event => {
 });
 
 
+/**
+ * Handle response statuses not in the range 200-299
+ * @param {Object} response - Response object from fetch
+ */
+const handleErrors = (response) => {
+  if (!response.ok) {
+    throw Error("Error " + response.status + ": " + response.statusText);
+  }
+  return response;
+};
+
+
 // *** Email Reservation System ***
 $('#order-btn').click(event => {
   event.preventDefault();
 
-  fetch('/reserve', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      items: cart.cart
-    }),
-  }).then(result => {
-    if (result.error) {
-      console.error(result.error.message);
-    }
-  });
+  // Make border red for improperly filled out form elements
+  $('#cartName').toggleClass("border border-danger", $('#cartName').is(':invalid'));
+  $('#cartEmail').toggleClass("border border-danger", $('#cartEmail').is(':invalid'));
+  $('#cartPhone').toggleClass("border border-danger", $('#cartPhone').is(':invalid'));
+
+  // Send confirmation email if customer properly filled out Cart form
+  if ($('#cartName').is(':valid')
+      && $('#cartEmail').is(':valid')
+      && $('#cartPhone').is(':valid')) {
+
+    fetch('/reserve', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        items: cart.cart,
+        cartName: $('#cartName').val(),
+        cartEmail: $('#cartEmail').val(),
+        cartPhone: $('#cartPhone').val(),
+        cartMsg:  $('#cartMsg').val()
+      })
+    })
+    .then(handleErrors)
+    .then(response => response.json())
+    .then(data => {
+      // Clear cart and update display
+      cart.clear();
+      cart.display();
+
+      // Redirect to reservation success page after 0.5 seconds
+      setTimeout(() => {
+        window.location.replace(data.successURL);
+      }, 500);
+      
+    })
+    .catch(error => {
+      alert('There was an error processing your lesson reservation request. Please contact Coach Joe to schedule a lesson. ' + error);
+    });
+  }
 });
 
 
