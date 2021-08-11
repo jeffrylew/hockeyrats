@@ -22,10 +22,32 @@ body {
   color: white;
 }
 
+.alert-fixed {
+  position: fixed;
+
+  /* Padding so fixed-top navbar doesn't cover content */
+  margin-top: 129.16px;
+
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
 /* For sm screens and up */
 @media (min-width: 576px) {
   body {
     padding-top: 149.78px;
+  }
+
+  .alert-fixed {
+    position: fixed;
+  
+    /* Padding so fixed-top navbar doesn't cover content */
+    margin-top: 149.78px;
+  
+    left: 0;
+    width: 100%;
+    z-index: 9999;
   }
 }
 
@@ -33,6 +55,17 @@ body {
 @media (min-width: 768px) {
   body {
     padding-top: 170.41px;
+  }
+
+  .alert-fixed {
+    position: fixed;
+  
+    /* Padding so fixed-top navbar doesn't cover content */
+    margin-top: 170.41px;
+  
+    left: 0;
+    width: 100%;
+    z-index: 9999;
   }
 }
 
@@ -99,17 +132,6 @@ a {
 
 #cartMsg {
   resize: none;
-}
-
-.alert-fixed {
-  position: fixed;
-
-  /* Padding so fixed-top navbar doesn't cover content */
-  margin-top: 68px;
-
-  left: 0;
-  width: 100%;
-  z-index: 9999;
 }
 
 #body-index {
