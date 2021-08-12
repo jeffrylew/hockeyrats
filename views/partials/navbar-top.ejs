@@ -36,18 +36,18 @@
       </ul>
 
       <!-- Toggler/hamburger dropdown divider between left and right side links -->
-      <!-- <div class="dropdown-divider d-block d-lg-none"></div> -->
+      <div class="dropdown-divider d-block d-lg-none"></div>
 
       <!-- Navbar for cart -->
-      <!-- <ul class="navbar-nav mr-1">
+      <ul class="navbar-nav mr-2">
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#cart">
-            <p class="d-inline d-lg-none">View Cart</p>
+            <p class="d-inline d-lg-none h5">Reservations</p>
             <i class="fas fa-shopping-cart fa-lg d-none d-lg-inline"></i>
             <span class="badge badge-light ml-1" id="cart-total-items"></span>
           </a>
         </li>
-      </ul> -->
+      </ul>
 
       <!-- Divider between cart and social media -->
       <!-- <div class="dropdown-divider d-block d-lg-none"></div> -->
@@ -80,9 +80,9 @@
 </nav>
 
 <!-- Alert when adding to cart for smaller screens -->
-<!-- <div class="alert alert-fixed alert-success fade show rounded-0 d-none d-lg-none" role="alert">
-  Added <span id="cart-item-name"></span> to <a href="#" class="text-primary" data-toggle="modal" data-target="#cart">cart.</a>
-</div> -->
+<div class="alert alert-fixed alert-success fade show rounded-0 d-none d-lg-none" role="alert">
+  Added <span id="cart-item-name"></span> to <a href="#" class="text-primary" data-toggle="modal" data-target="#cart">reservations.</a>
+</div>
 
 <!-- Include modal for cart -->
-<%# include("cart.ejs") %>
+<%- include("cart.ejs") %>

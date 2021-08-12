@@ -73,6 +73,9 @@ router.get('/', (req, res, next) => {
   const isToday     = require('date-fns/isToday');
   const isPast      = require('date-fns/isPast');
   const isWednesday = require('date-fns/isWednesday');
+  const isFriday    = require('date-fns/isFriday');
+  const isSaturday  = require('date-fns/isSaturday');
+  const isSunday    = require('date-fns/isSunday');
   const format      = require('date-fns/format');
 
   res.render('lessons',
@@ -83,6 +86,9 @@ router.get('/', (req, res, next) => {
               isToday: isToday,
               isPast: isPast,
               isWednesday: isWednesday,
+              isFriday: isFriday,
+              isSaturday: isSaturday,
+              isSunday: isSunday,
               format: format
             });
 });

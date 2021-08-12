@@ -131,7 +131,7 @@ class Cart {
 
     if (!Array.isArray(this.cart) || !this.cart.length) {
       // Array does not exist, is not an array, or is empty
-      table_contents = "Your cart is empty"
+      table_contents = "You have no reservations"
 
       // Clear cart notification badge
       $('#cart-total-items').empty();
@@ -139,8 +139,16 @@ class Cart {
       // Hide Clear Cart link
       $('#clear-cart').addClass('d-none');
 
+      // Right-align Close and Reserve Now buttons in Cart modal
+      $('div.modal-footer')
+      .removeClass('justify-content-center')
+      .addClass('justify-content-end');
+
+      // Hide form elements from Cart modal
+      $('div.modal-form-element').addClass('d-none');
+
       // Hide cart total
-      $('#cart-total-price').empty();
+      // $('#cart-total-price').empty();
 
       // Disable Order Now button
       $('#order-btn').prop('disabled', true);
@@ -150,10 +158,10 @@ class Cart {
         table_contents += "<tr>"
           + "<td><button type='button' class='close float-left delete-item' aria-label='Delete cart item' data-name='" + item.name + "'><span aria-hidden='true'>&times;</span></button></td>"
           + "<td>" + item.name.substr(0, 11) + "<br class='d-inline d-md-none'>" + item.name.substr(11) + "</td>"
-          + "<td class='row justify-content-center'><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='col-sm-3'>"
+          + "<td class='row justify-content-center'><button class='col-3 col-lg-2 btn btn-outline-primary btn-sm increment-qty' data-name='" + item.name + "' data-price='" + item.price + "'>&#65291;</button><span class='col-3 col-lg-2'>"
           + item.qty
-          + "</span><button class='col-sm-3 col-lg-2 btn btn-outline-info btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
-          + "<td>$" + Number(item.qty * item.price).toFixed(2) + "</td>"
+          + "</span><button class='col-3 col-lg-2 btn btn-outline-primary btn-sm decrement-qty' data-name='" + item.name + "'>&#65293;</button></td>"
+          // + "<td>$" + Number(item.qty * item.price).toFixed(2) + "</td>"
           + "</tr>"
       });
 
@@ -163,8 +171,16 @@ class Cart {
       // Show Clear Cart link
       $('#clear-cart').removeClass('d-none');
 
+      // Center form elements in Cart modal
+      $('div.modal-footer')
+      .removeClass('justify-content-end')
+      .addClass('justify-content-center');
+
+      // Show form elements in Cart modal
+      $('div.modal-form-element').removeClass('d-none');
+
       // Evaluate cart total if totalItems > 0
-      $('#cart-total-price').html("Total: $" + this.getTotalPrice());
+      // $('#cart-total-price').html("Total: $" + this.getTotalPrice());
 
       // Enable Order Now button
       $('#order-btn').prop('disabled', false);
@@ -240,6 +256,66 @@ $('#cart-table').on("click", ".delete-item", event => {
 });
 
 
+/**
+ * Handle response statuses not in the range 200-299
+ * @param {Object} response - Response object from fetch
+ */
+const handleErrors = (response) => {
+  if (!response.ok) {
+    throw Error("Error " + response.status + ": " + response.statusText);
+  }
+  return response;
+};
+
+
+// *** Email Reservation System ***
+$('#order-btn').click(event => {
+  event.preventDefault();
+
+  // Make border red for improperly filled out form elements
+  $('#cartName').toggleClass("border border-danger", $('#cartName').is(':invalid'));
+  $('#cartEmail').toggleClass("border border-danger", $('#cartEmail').is(':invalid'));
+  $('#cartPhone').toggleClass("border border-danger", $('#cartPhone').is(':invalid'));
+
+  // Send confirmation email if customer properly filled out Cart form
+  if ($('#cartName').is(':valid')
+      && $('#cartEmail').is(':valid')
+      && $('#cartPhone').is(':valid')) {
+
+    fetch('/reserve', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        items: cart.cart,
+        cartName: $('#cartName').val(),
+        cartEmail: $('#cartEmail').val(),
+        cartPhone: $('#cartPhone').val(),
+        cartMsg:  $('#cartMsg').val()
+      })
+    })
+    .then(handleErrors)
+    .then(response => response.json())
+    .then(data => {
+      // Clear cart and update display
+      cart.clear();
+      cart.display();
+
+      // Redirect to reservation success page after 0.5 seconds
+      setTimeout(() => {
+        window.location.replace(data.successURL);
+      }, 500);
+      
+    })
+    .catch(error => {
+      alert('There was an error processing your lesson reservation request. Please contact Coach Joe to schedule a lesson. ' + error);
+    });
+  }
+});
+
+
+/*
 // *** Stripe Integration ***
 
 // *** Handle any error returns from Checkout ***
@@ -290,3 +366,4 @@ fetch('/order/config')
       });
     });
   });
+*/
